@@ -3,7 +3,7 @@ const express = require("express")
 
 const app = express();
 const url = "https://www.zapimoveis.com.br/imobiliaria/74969/?transacao=venda&pagina=1";
-const port = 3000;
+const port = 3001;
 
 app.get("/properties", async (req, res) => {
     try {
@@ -48,8 +48,6 @@ async function scrapeProperties() {
             }, 100);
 
         })
-
-
 
         const posts = Array.from(document.querySelectorAll(".ListingCard_result-card__Pumtx"));
         
